@@ -62,8 +62,8 @@ const Footer = () => {
   ];
 
   const rightLinks = [
-    { name: "Github", url: "https://github.com" },
-    { name: "Facebook", url: "https://facebook.com" },
+    { name: "Github     ", url: "https://github.com/ahmrafi22/PetVally"},
+    { name: "Admin", url: "/admin" },
   ];
 
   interface LinkProps {
@@ -76,7 +76,9 @@ const Footer = () => {
 
     const handleClick = (e: React.MouseEvent) => {
       e.preventDefault();
-      if (url.startsWith("http")) {
+      if (url === "/") {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (url.startsWith("http")) {
         window.open(url, "_blank");
       } else {
         router.push(url);
@@ -85,21 +87,21 @@ const Footer = () => {
 
     return (
       <li
-        className="relative cursor-pointer sm:h-8 h-5 overflow-hidden"
+        className="relative cursor-pointer sm:h-8 w-fit hover:w-fit h-5 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
       >
         <a className="block relative">
           <span
-            className={`block transition-transform duration-300 ease-in-out ${
+            className={`block whitespace-nowrap transition-transform duration-300 ease-in-out ${
               isHovered ? "-translate-y-full" : "translate-y-0"
             }`}
           >
             {name}
           </span>
           <span
-            className={`absolute top-0 left-0 text-[#ff7a66] font-medium transition-transform duration-300 ease-in-out ${
+            className={`absolute top-0 left-0 whitespace-nowrap text-[#ff7a66] font-medium transition-transform duration-300 ease-in-out ${
               isHovered ? "translate-y-0" : "translate-y-full"
             }`}
           >
@@ -119,19 +121,19 @@ const Footer = () => {
               <LinkWithEffect key={index} name={link.name} url={link.url} />
             ))}
           </ul>
-          <ul className="space-y-2">
+          <ul className="space-y-2 ">
             {rightLinks.map((link, index) => (
               <LinkWithEffect key={index} name={link.name} url={link.url} />
             ))}
           </ul>
         </div>
 
-        {/* Animated Pet Vally Title */}
+        {/*Pet Vally Title */}
         <h2
           ref={headingRef}
           className={cn(
             text.className,
-            "absolute bottom-0 left-0 md:translate-y-10 translate-y-5 md:text-[160px] lg:text-[256px] text-[80px] text-[#ff5941] flex items-center"
+            "absolute bottom-0 left-0 md:translate-y-10 translate-y-2 md:text-[160px] lg:text-[256px] text-[80px] text-[#ff5941] flex items-center"
           )}
         >
           <PawPrint className="inline-block w-15 h-15 md:w-30 md:h-30 lg:w-45 lg:h-45 fill-current mr-0" />
