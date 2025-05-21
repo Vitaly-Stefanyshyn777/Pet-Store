@@ -9,6 +9,7 @@
     "lint": "next lint",
     "seed": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" prisma/seed.ts",
     "seed3": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" prisma/donationseed.ts",
+    "seed-alt": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" prisma/dont-seed-this.ts",
     "type-check": "tsc --noEmit"
   },
   "prisma": {
