@@ -81,16 +81,6 @@ async function main() {
       category: "food",
     },
     {
-      name: "Large Breed Puppy Food",
-      description:
-        "Specially formulated for large breed puppies to support healthy growth and development. Contains glucosamine and chondroitin for joint health. Balanced calcium and phosphorus for proper bone development. Supports immune system with added vitamins.",
-      price: 34.99,
-      stock: 30,
-      image:
-        "https://res.cloudinary.com/doyqdfuxd/image/upload/v1744614389/products/throcu3ywbri2jaf9vrq",
-      category: "food",
-    },
-    {
       name: "Grain-Free Dog Food",
       description:
         "Premium grain-free formula for dogs with food sensitivities. Made with real meat as the first ingredient. Free from corn, wheat, and soy. Contains sweet potatoes and peas as alternative carbohydrate sources.",
