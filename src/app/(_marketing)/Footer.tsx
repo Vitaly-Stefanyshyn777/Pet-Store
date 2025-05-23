@@ -62,7 +62,10 @@ const Footer = () => {
   ];
 
   const rightLinks = [
-    { name: "Github     ", url: "https://github.com/ahmrafi22/PetVally"},
+    {
+      name: "Github     ",
+      url: "https://github.com/Vitaly-Stefanyshyn777/Pet-Store",
+    },
     { name: "Admin", url: "/admin" },
   ];
 
@@ -77,7 +80,7 @@ const Footer = () => {
     const handleClick = (e: React.MouseEvent) => {
       e.preventDefault();
       if (url === "/") {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else if (url.startsWith("http")) {
         window.open(url, "_blank");
       } else {
