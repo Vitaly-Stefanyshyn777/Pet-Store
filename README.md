@@ -2,8 +2,6 @@
 
 ## About This Project
 
-`Project for CSE 470 - Software Engineering`
-
 ![Petvally banner](./public/petvally.png)
 
 We are Building a comunity of petowners and caregivers. More info will be added later......... :
